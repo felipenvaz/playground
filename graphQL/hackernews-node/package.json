@@ -1,0 +1,19 @@
+{
+  "name": "hackernews-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run copy-schema && tsc && node ./dist/index.js",
+    "copy-schema": "copyfiles -f src/**/*.graphql dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^1.17.4",
+    "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0"
+  }
+}
