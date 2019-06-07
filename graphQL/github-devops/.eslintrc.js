@@ -39,7 +39,7 @@ module.exports = {
       'ignoreRestSiblings': false
     }],
     '@typescript-eslint/indent': 'off',
-    '@typescript-eslint/interface-name-prefix': ['error', 'always'],
+    '@typescript-eslint/interface-name-prefix': ['error', 'never'],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/semi': ['error'],
     'array-bracket-spacing': ['error', 'never'],
