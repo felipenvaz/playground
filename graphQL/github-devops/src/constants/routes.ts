@@ -1,4 +1,5 @@
 export default {
   home: '/',
-  pullRequests: '/pull-requests',
+  login: '/login',
+  merge: '/merge',
 };

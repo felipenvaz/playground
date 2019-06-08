@@ -1,21 +1,23 @@
-import React from 'react';
+import * as React from 'react';
+import {
+  BrowserRouter,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import Login from './pages/Login';
+import Merge from './pages/Merge';
+import routes from './constants/routes';
+
 
 const App: React.FC = () => (
-  <div className="App">
-    <header className="App-header">
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
+  <BrowserRouter>
+    <Switch>
+      <Route path={routes.merge} component={Merge} />
+      <Route path={routes.login} component={Login} />
+      <Redirect from={routes.home} to={routes.merge} />
+    </Switch>
+  </BrowserRouter>
 );
 
 export default App;

@@ -28,19 +28,16 @@ module.exports = {
   settings: {
     'import/resolver': {
       'node': {
-        'extensions': ['.js', '.ts']
+        'extensions': ['.js', '.ts', '.tsx']
       }
     }
   },
   rules: {
-    '@typescript-eslint/no-unused-vars': ['error', {
-      'vars': 'all',
-      'args': 'after-used',
-      'ignoreRestSiblings': false
-    }],
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/interface-name-prefix': ['error', 'never'],
-    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/semi': ['error'],
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'always'],
@@ -66,5 +63,6 @@ module.exports = {
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
     'import/no-extraneous-dependencies': 'off',
     'arrow-parens': 'off',
+    'import/order': 'off',
   },
 };
